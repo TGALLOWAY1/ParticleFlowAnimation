@@ -273,10 +273,11 @@ const ParticleFlowViz = () => {
   return (
     <div className="relative w-full h-screen bg-black overflow-hidden">
       <Canvas
-        camera={{ position: [0, 0, 1000], fov: 75 }}
+        camera={{ position: [0, 0, 800], fov: 60 }}
         gl={{ alpha: false, antialias: false }}
         dpr={[1, 2]}
       >
+        <color attach="background" args={['#000000']} />
         <Particles audioData={audioData} colorScheme={colorScheme} particleCount={particleCount} />
       </Canvas>
       
